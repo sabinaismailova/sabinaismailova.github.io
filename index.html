@@ -146,8 +146,7 @@
                 var inputValue = document.getElementById("message-text").value;
                 var t = document.createTextNode(inputValue);
                 var span = document.createElement("span");
-                span.appendChild(t);
-                label.appendChild(input);
+                
                 var selectedDate = document.getElementById("date").value;
                 if(selectedDate!=""){
                     var dateSpace = document.createElement("small");
@@ -157,6 +156,9 @@
                     dateSpace.appendChild(due);
                     span.appendChild(dateSpace);
                 }
+                span.appendChild(t);
+                label.appendChild(input);
+                
                 label.appendChild(span);
                 if(inputValue == '')
                     alert("You must write something!");
