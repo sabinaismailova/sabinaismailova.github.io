@@ -10,16 +10,9 @@
             .form-check-input:checked {
                 background-color: #7471dd;
                 border-color: #7471dd;
+                text-decoration:line-through;
             }
-            /*code for side button from stack-overflow(will be sited)*/
-            .side-btn{
-                float:left;
-                width:15%;
-                white-space:normal;
-                position:absolute;
-                top:10px;
-                bottom:10px;
-            }
+            
 
         </style>
         <title>To-Do List</title>
@@ -46,7 +39,7 @@
                 <!--Modal example from bootstrap documentation components-modal-vertically centered -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Add Task
+                    Add a Task
                 </button>
   
                 <!-- Modal -->
@@ -78,7 +71,6 @@
                     <span>
                       Study for Exam
                     </span>
-                    <input class="btn-close side-btn">
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
