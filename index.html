@@ -80,7 +80,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -92,7 +92,7 @@
                     <span>
                       Complete assignment 1 for DSA
                       <small class="d-block text-muted">
-                        <input type="date" value="02/01/2023">
+                        <input type="date" value="2023-02-01">
                       </small>
                     </span>
                     <span class="close" id="close">
@@ -148,6 +148,15 @@
                 var span = document.createElement("span");
                 span.appendChild(t);
                 label.appendChild(input);
+                var selectedDate = document.getElementById("date").value;
+                if(selectedDate!=""){
+                    var dateSpace = document.createElement("small");
+                    var due = document.createElement("input");
+                    due.type="date";
+                    due.value=selectedDate;
+                    dateSpace.appendChild(due);
+                    span.appendChild(dateSpace);
+                }
                 label.appendChild(span);
                 if(inputValue == '')
                     alert("You must write something!");
@@ -163,15 +172,6 @@
                 btn.onclick = function(){this.parentElement.parentElement.remove();};
                 s.appendChild(btn);
                 label.appendChild(s);
-                var selectedDate = document.getElementById("date").value;
-                if(selectedDate!=""){
-                    var dateSpace = document.createElement("small");
-                    var due = document.createElement("input");
-                    due.type="date";
-                    due.value=selectedDate;
-                    dateSpace.appendChild(due);
-                    label.appendChild(dateSpace);
-                }
                 var xButton = document.getElementById("x-button");
                 xButton.click();
             }
