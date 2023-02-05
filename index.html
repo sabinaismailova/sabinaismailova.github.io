@@ -80,7 +80,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -157,11 +157,11 @@
                 var s = document.createElement("span");
                 s.className = "close";
                 s.id = "close";
+                var btn = document.createElement("button");
                 btn.className = "btn-close";
                 btn.type = "button";
                 s.appendChild(btn);
                 label.appendChild(s);
-                var btn = document.createElement("button");
                 var xButton = document.getElementById("x-button");
                 xButton.click();
             }
