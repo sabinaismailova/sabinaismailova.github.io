@@ -51,7 +51,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="addTask()">Add</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()">Add1</button>
                         </div>
                     </div>
                     </div>
@@ -112,8 +112,8 @@
                 var t = document.createTextNode(inputValue);
                 var span = document.createElement("span");
                 span.appendChild(t);
-                input.appendChild(span);
                 label.appendChild(input);
+                label.appendChild(span);
                 if(inputValue == '')
                     alert("You must write something!");
                 else
