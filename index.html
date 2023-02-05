@@ -39,7 +39,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Adding Task</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" id="x-button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="addTask()">Add1</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()">Add</button>
                         </div>
                     </div>
                     </div>
@@ -118,6 +118,9 @@
                     alert("You must write something!");
                 else
                     document.getElementById("list-group").appendChild(label);
+                document.getElementById("message-text").value = "";
+                var xButton = document.getElementById("x-button");
+                xButton.click();
             }
         </script>
     </body>
