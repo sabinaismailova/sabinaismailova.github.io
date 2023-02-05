@@ -11,6 +11,14 @@
                 text-decoration-color: rgb(77, 134, 238);
                 text-decoration: line-through;
             }
+
+            /*Got the style for close button from W3schools tutorial I got the temp for function addTask() from*/
+            .close{
+                position:absolute;
+                right:0;
+                top:0;
+                padding: 12px 16px 12px 16px
+            }
         </style>
         <title>To-Do List</title>
     </head>
@@ -72,9 +80,11 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
-                    <button type="button" class="btn-close" data-bs-dismiss="list-group-item" aria-label="Close"></button>
+                    <span class="close">
+                        \u00D7
+                    </span>
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
