@@ -113,7 +113,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                        Clean and reorganize my desk
+                        Clean and reorganize desk
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -147,7 +147,8 @@
                 var t = document.createTextNode(inputValue);
                 var span = document.createElement("span");
                 span.appendChild(t);
-                var newLine = "\n";
+                var newLine = document.createElement("br");
+                span.appendChild(newLine);
                 var selectedDate = document.getElementById("date").value;
                 if(selectedDate!=""){
                     var dateSpace = document.createElement("small");
