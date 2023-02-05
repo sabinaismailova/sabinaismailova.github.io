@@ -80,7 +80,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="del()"></button>
@@ -95,12 +95,18 @@
                         <input type="date">
                       </small>
                     </span>
+                    <span class="close" id="close">
+                        <button type="button" class="btn-close" onclick="del()"></button>
+                    </span>
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
                       Go grocery shopping
+                    </span>
+                    <span class="close" id="close">
+                        <button type="button" class="btn-close" onclick="del()"></button>
                     </span>
                 </label>
 
@@ -109,12 +115,18 @@
                     <span>
                         Clean and re-organize my desk
                     </span>
+                    <span class="close" id="close">
+                        <button type="button" class="btn-close" onclick="del()"></button>
+                    </span>
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
                         Work on group project
+                    </span>
+                    <span class="close" id="close">
+                        <button type="button" class="btn-close" onclick="del()"></button>
                     </span>
                 </label>
 
@@ -146,6 +158,15 @@
                 else
                     document.getElementById("list-group").appendChild(label);
                 document.getElementById("message-text").value = "";
+                var s = document.createElement("span");
+                var btn = document.createElement("button");
+                s.className = "close";
+                s.id = "close";
+                btn.className = "btn-close";
+                btn.type = "button";
+                btn.onclick = "del()";
+                s.appendChild(btn);
+                label.appendChild(s);
                 var xButton = document.getElementById("x-button");
                 xButton.click();
             }
