@@ -80,7 +80,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close">
                         <button type="button" class="btn-close" onclick="del()"></button>
@@ -127,7 +127,7 @@
                 var close = document.getElementByClassName("close");
                 close.onclick = function(){
                     var div = this.parentElement;
-                    div.style.display = "none";
+                    div.remove();
                 }
             }
             /*Got the template for this function from W3schools tutorial. Link:https://www.w3schools.com/howto/howto_js_todolist.asp*/
