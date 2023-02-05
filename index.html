@@ -51,7 +51,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="addTask()">Add1</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()">Add</button>
                         </div>
                     </div>
                     </div>
@@ -108,10 +108,10 @@
                 input.className = "form-check-input flex-shrink-0";
                 input.type = "checkbox";
                 input.value = "";
-                var inputValue = document.getElementById("message-text").value;
+                var inputValue = document.getElementById("message-text").textContent;
                 var t = document.createTextNode(inputValue);
                 var span = document.createElement("span");
-                span.value=t;
+                span.textContent=t;
                 input.appendChild(span);
                 label.appendChild(input);
                 if(inputValue == '')
