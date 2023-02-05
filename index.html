@@ -64,7 +64,7 @@
                                 <!--using above code as a template-->
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Date:</label>
-                                    <input type="date" value="02/01/2023">
+                                    <input type="date" id="date">
                                 </div>
                             </form>
                         </div>
@@ -80,7 +80,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -92,7 +92,7 @@
                     <span>
                       Complete assignment 1 for DSA
                       <small class="d-block text-muted">
-                        <input type="date">
+                        <input type="date" value="02/01/2023">
                       </small>
                     </span>
                     <span class="close" id="close">
@@ -163,6 +163,15 @@
                 btn.onclick = function(){this.parentElement.parentElement.remove();};
                 s.appendChild(btn);
                 label.appendChild(s);
+                var selectedDate = document.getElementById("date").val();
+                if(selectedDate!=""){
+                    var dateSpace = document.createElement("small");
+                    var due = document.createElement("input");
+                    due.type="date";
+                    due.value=selectedDate;
+                    dateSpace.appendChild(due);
+                    label.appendChild(dateSpace);
+                }
                 var xButton = document.getElementById("x-button");
                 xButton.click();
             }
