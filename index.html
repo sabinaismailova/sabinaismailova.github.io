@@ -51,7 +51,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="addTask()">Add1</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()">Add</button>
                         </div>
                     </div>
                     </div>
@@ -119,18 +119,6 @@
                 else
                     document.getElementById("list-group").appendChild(label);
                 document.getElementById("message-text").value = "";
-                var s = document.createElement("span");
-                var txt = document.createTextNode("\u00D7");
-                s.className = "close";
-                s.appendChild(txt);
-                label.appendChild(s);
-
-                for(i=0;i<close.length;i++){
-                    close[i].onclick = function(){
-                        var div = this.parentElement;
-                        div.style.display = "none";
-                    }
-                }
             }
         </script>
     </body>
