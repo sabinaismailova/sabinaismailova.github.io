@@ -24,6 +24,18 @@
             .border-bottom {
                 border-bottom: 2px solid #493a33 !important;
             }
+
+            /*override list-group-item to try to add space between list items*/
+            .list-group-item {
+                position: relative;
+                display: block;
+                padding: 0.5rem 1rem;
+                color: #212529;
+                text-decoration: none;
+                background-color: #fff;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                margin: 10px;
+            }
         </style>
         <title>To-Do List</title>
     </head>
@@ -77,17 +89,17 @@
                 </div>
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
-                <label class="list-group-item d-flex gap-2 py-3">
+                <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
-                      Study for Exams
+                      Study for Exam
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
                     </span>
                 </label>
 
-                <label class="list-group-item d-flex gap-2 py-3">
+                <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
                     <span>
                         Complete assignment 1 for DSA
