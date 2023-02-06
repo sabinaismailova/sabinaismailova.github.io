@@ -8,7 +8,7 @@
         <style>
             /*Got this from stack-overflow. Link: https://stackoverflow.com/questions/30975459/add-strikethrough-to-checked-checkbox*/
             .strikethrough:checked+span{
-                text-decoration-color: rgb(77, 134, 238);
+                text-decoration-color: rgb(255, 176, 17);
                 text-decoration: line-through;
             }
 
@@ -38,6 +38,13 @@
                 border-radius: 8px solid rgba(18, 17, 16, 0.125);
                 margin: 10px;
             }
+
+            /*override to change checkbox checked color */
+            .form-check-input[type=checkbox]:indeterminate {
+                background-color: rgb(255, 230, 41);
+                border-color: rgb(255, 230, 41);
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+            }
         </style>
         <title>To-Do List</title>
     </head>
@@ -57,7 +64,7 @@
             <ul class="list-group" id="list-group">
                 <!--Modal example from bootstrap documentation components-modal-vertically centered -->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color:rgb(42, 34, 31); color:rgb(240, 231, 225); font-family:Georgia;">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color:rgb(42, 34, 31); border-color:rgb(42, 34, 31); color:rgb(240, 231, 225); font-family:Georgia;">
                     Add Task
                 </button>
   
