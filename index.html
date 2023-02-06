@@ -25,15 +25,17 @@
                 border-bottom: 2px solid #493a33 !important;
             }
 
-            /*override list-group-item to try to add space between list items, round the borders, and change opacity */
+            /*override list-group-item to try to add space between list items, round the edges, 
+            change opacity, and change text font&color */
             .list-group-item {
                 position: relative;
                 display: block;
                 padding: 0.5rem 1rem;
-                color: #212529;
+                color: #181514;
+                font-family:Georgia;
                 text-decoration: none;
-                background-color: rgb(255, 255, 255, 0.25);
-                border-radius: 5px solid rgba(0, 0, 0, 0.125);
+                background-color: rgba(65, 44, 34, 0.25);
+                border-radius: 8px solid rgba(18, 17, 16, 0.125);
                 margin: 10px;
             }
         </style>
@@ -55,7 +57,7 @@
             <ul class="list-group" id="list-group">
                 <!--Modal example from bootstrap documentation components-modal-vertically centered -->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color:rgb(42, 34, 31); color:rgb(240, 231, 225); font-family:Georgia;">
                     Add Task
                 </button>
   
