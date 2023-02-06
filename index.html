@@ -71,6 +71,18 @@
                 background-color: rgb(42, 34, 31);
                 border-color: rgb(42, 34, 31);
             }
+
+            .btn-secondary:focus {
+                color: rgb(240, 231, 225);
+                background-color: rgb(192, 169, 160);
+                border-color: rgb(192, 169, 160);
+                box-shadow: 0 0 0 0.25rem rgba(241, 195, 135, 0.5);
+            }
+            .btn-secondary, .btn-secondary:hover{
+                color: rgb(240, 231, 225);
+                background-color: rgb(192, 169, 160);
+                border-color: rgb(192, 169, 160);
+            }
         </style>
         <title>To-Do List</title>
     </head>
@@ -79,8 +91,8 @@
         <!--<h1 style="font-size:30px;">Today's To-Do List</h1>
         <p>My first paragraph.</p>-->
         
+        <img class="img-bottom-right" scr="image.png" alt="image here ">
         <div class="container">
-            <img class="img-bottom-right" scr="image.png" alt="image here ">
             <!--Puttng in a header from bootstrap-5.1.3-examples headers-->
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -101,25 +113,25 @@
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Adding Task</h5>
+                        <h5 class="modal-title" id="exampleModalLabel" style="font-family:Georgia;">Adding Task</h5>
                         <button type="button" class="btn-close" id="x-button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Task:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
+                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Task:</label>
+                                    <textarea class="form-control" id="message-text" style="font-family:Georgia;"></textarea>
                                 </div>
                                 <!--using above code as a template-->
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Date(optional):</label>
+                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Date(optional):</label>
                                     <input type="date" id="date" value="">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="addTask()">Add</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family:Georgia;">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()" style="font-family:Georgia;">Add</button>
                         </div>
                     </div>
                     </div>
