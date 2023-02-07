@@ -12,6 +12,15 @@
                 text-decoration: line-through;
             }
 
+            .disp{
+                transition-property:url("img/4776078");
+                transition-duration:4s;
+                transition-timing-function:linear;
+            }
+            .disp:checked+body{
+                display:none;
+            }
+
             /*Got the style for close button from W3schools tutorial I got the temp for function addTask() from*/
             .close{
                 position:absolute;
@@ -139,9 +148,9 @@
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
                     <img class="img-fluid" src="img/4776078.jpeg" alt="img appear" id="img" style="display:none">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" onchange="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough disp" id="check" type="checkbox" onchange="celebration()" value="">
                     <span>
-                      Study for Exams
+                      Study for Exam
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
