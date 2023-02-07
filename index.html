@@ -96,7 +96,7 @@
     
     <body style="background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-repeat:no-repeat; background-size:0" id="bg" >
         
-        <img class="img-bottom-right" src="img/4776078.jpeg" alt="img here" width="399" height="339">
+        <img class="img-fluid img-bottom-right" src="img/4776078.jpeg" alt="img here" width="399" height="339">
         <div class="container">
             <!--Puttng in a header from bootstrap-5.1.3-examples headers-->
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -146,7 +146,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" onchange="celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -199,7 +199,7 @@
 
             </ul>
 
-            <img class="img-bottom-left" src="img/IMG_9947.GIF" id="img" alt="img here" width="678" height="570" style="display:none">
+            <img class="img-fluid img-bottom-left" src="img/IMG_9947.GIF" id="img" alt="img here" width="678" height="570" style="display:none">
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -252,7 +252,7 @@
             function celebration(){
                 var img = document.getElementById("img");
                 var check = document.getElementById("check");
-                if(check.getAttribute("value")==""){
+                if(check.getAttribute("value")=="checked"){
                     img.style = "";
                     setTimeout(function(){
                         img.style = "display:none"
