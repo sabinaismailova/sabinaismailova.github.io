@@ -43,6 +43,7 @@
             .form-check-input:checked {
                 background-color: rgb(217, 196, 41);
                 border-color: rgb(217, 196, 41);
+                js: celebration();
             }
 
             /*override to change shadow color when checkbox is clicked*/
@@ -137,9 +138,9 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" onclick="celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -238,6 +239,14 @@
                 label.appendChild(s);
                 var xButton = document.getElementById("x-button");
                 xButton.click();
+            }
+
+            function celebration(){
+                var img = document.createElement("img");
+                img.src = "img/4776078.jpeg";
+                img.alt = "img appear";
+                img.className = "img-fluid";
+                var show = setTimeOut(show(img), 4000);
             }
         </script>
     </body>
