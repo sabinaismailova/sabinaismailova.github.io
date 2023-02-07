@@ -144,9 +144,9 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="celeb" type="checkbox" oninput="celebration()" value="checked">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -251,8 +251,11 @@
 
             function celebration(){
                 var img = document.getElementById("img");
-                img.style = "";
-                setTimeout(function(){img.style = "display:none"}, 2000);
+                var check = document.getElementById("celeb");
+                if(check.getAttribute("value")==""){
+                    img.style = "";
+                    setTimeout(function(){img.style = "display:none"}, 2000);
+                }
             }
         </script>
     </body>
