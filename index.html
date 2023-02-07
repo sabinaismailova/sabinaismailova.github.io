@@ -43,7 +43,6 @@
             .form-check-input:checked {
                 background-color: rgb(217, 196, 41);
                 border-color: rgb(217, 196, 41);
-                js: celebration();
             }
 
             /*override to change shadow color when checkbox is clicked*/
@@ -62,8 +61,8 @@
 
             .img-bottom-left{
                 position: absolute;
-                left: 50%;
-                bottom: 50%;
+                margin-left: 50%;
+                margin-top: 50%;
             }
 
             /*override to change the add-task button colors */
@@ -146,7 +145,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="celeb" type="checkbox" oninput="celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
