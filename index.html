@@ -147,7 +147,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -253,7 +253,7 @@
             function celebration(){
                 var img = document.getElementById("img");
                 var check = document.getElementById("check");
-                if(check.value=""){
+                if(check.getAttribute(value)=""){
                     img.style = "";
                     setTimeout(function(){
                         img.style = "display:none"
