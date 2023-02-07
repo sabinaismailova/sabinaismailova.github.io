@@ -252,7 +252,8 @@
 
             function celebration(){
                 var img = document.getElementById("img");
-                if(img.value=""){
+                var check = document.getElementById("check")
+                if(check.value=""){
                     img.style = "";
                     setTimeout(function(){
                         img.style = "display:none"
