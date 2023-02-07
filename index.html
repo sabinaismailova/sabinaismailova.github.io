@@ -250,14 +250,17 @@
             }
 
             function celebration(){
-                var img = document.getElementById("img");
-                var check = document.getElementById("check");
-                if(check.getAttribute("value")=="checked"){
-                    img.style = "";
-                    setTimeout(function(){
-                        img.style = "display:none"
-                    }, 2000);
-                }
+                var img = document.createElement("img");
+                img.className = "img-fluid img-bottom-left";
+                img.src = "img/IMG_9947.GIF";
+                img.alt = "img here";
+                img.width = "678";
+                img.height = "570";
+                img.style = "display: none";
+                var body = document.getElementByTagName("body");
+                body.appendChild(img);
+                img.style = "";
+                setTimeout(function(){img.style = "display:none"}, 2000);
             }
         </script>
     </body>
