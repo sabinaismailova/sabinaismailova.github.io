@@ -88,7 +88,7 @@
         <title>To-Do List</title>
     </head>
     
-    <body style="background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-size:0" id="bg" >
+    <body style="background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-repeat:no-repeat; background-size:0" id="bg" >
         
         <img class="img-bottom-right" src="img/4776078.jpeg" alt="img here" width="399" height="339">
         <div class="container">
@@ -245,7 +245,9 @@
 
             function celebration(){
                 var img = document.getElementById("bg");
-                img.style = "background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-size:1";
+                setTimeLimit(function(){
+                    img.style = "background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-repeat:no-repeat;"
+                }, 4000);
             }
         </script>
     </body>
