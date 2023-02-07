@@ -88,7 +88,7 @@
         <title>To-Do List</title>
     </head>
     
-    <body style="background-color:#FEEACA; z-index:-1;">
+    <body style="background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-size:0" id="bg" >
         
         <img class="img-bottom-right" src="img/4776078.jpeg" alt="img here" width="399" height="339">
         <div class="container">
@@ -100,7 +100,7 @@
             </header>
             
 
-            <ul class="list-group" id="list-group" style="z-index:-1;">
+            <ul class="list-group" id="list-group">
                 <!--Modal example from bootstrap documentation components-modal-vertically centered -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-family:Georgia">
@@ -140,7 +140,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -244,8 +244,8 @@
             }
 
             function celebration(){
-                var img = document.getElementById("img");
-                img.style = "z-index:1";
+                var img = document.getElementById("bg");
+                img.style = "background-color:#FEEACA; background-image:url(img/4776078.jpeg); background-size:1";
             }
         </script>
     </body>
