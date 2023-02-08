@@ -59,7 +59,7 @@
                 bottom: 0%;
             }
 
-            .img-bottom-left{
+            .img-center{
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -144,19 +144,25 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
+                        document.getElementById('img').style = '';
+                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
+                    }" value="">
                     <span>
                       Study for Exam
                     </span>
                     <span class="close" id="close">
-                        <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
+                        <button type="button" class="btn-close" onclick="this.crossOff()"></button>
                     </span>
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
+                        document.getElementById('img').style = '';
+                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
+                    }" value="">
                     <span>
-                        Complete assignment 1 for DS
+                        Complete assignment 1 for DSA
                         <br>
                         <small>
                             <input type="date" value="2023-02-01">
@@ -168,7 +174,10 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
+                        document.getElementById('img').style = '';
+                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
+                    }" value="">
                     <span>
                       Go grocery shopping
                     </span>
@@ -178,7 +187,10 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
+                        document.getElementById('img').style = '';
+                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
+                    }" value="">
                     <span>
                         Clean and reorganize my desk
                     </span>
@@ -188,7 +200,10 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
+                        document.getElementById('img').style = '';
+                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
+                    }" value="">
                     <span>
                         Work on group project
                     </span>
@@ -198,9 +213,8 @@
                 </label>
 
             </ul>
-            <div class="text-center">
-                <img class="img-fluid img-bottom-left" src="img/IMG_9946.GIF" id="img" alt="img here" width="786" height="675" style="display:none">
-            </div>
+            
+            <img class="img-fluid img-center" src="img/IMG_9946.GIF" id="img" alt="img here" width="786" height="675" style="display:none">
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -257,12 +271,8 @@
                 xButton.click();
             }
 
-            function celebration(){
-                var img = document.getElementById("img");
-                if(this.checked){
-                    img.style = "";
-                    setTimeout(function(){img.style = "display:none"}, 1000);
-                }
+            function crossOff(){
+                this.parentElement.parentElement.remove();
             }
         </script>
     </body>
