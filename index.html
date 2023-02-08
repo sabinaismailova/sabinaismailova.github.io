@@ -144,7 +144,7 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="celeb" type="checkbox" oninput="celebration()" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
                       Study for Exam
                     </span>
@@ -154,9 +154,9 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="" checked>
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
-                        Complete assignment 1 for DSA
+                        Complete assignment 1 for DS
                         <br>
                         <small>
                             <input type="date" value="2023-02-01">
@@ -168,7 +168,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
                       Go grocery shopping
                     </span>
@@ -178,7 +178,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
                         Clean and reorganize my desk
                     </span>
@@ -188,7 +188,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" type="checkbox" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
                         Work on group project
                     </span>
@@ -211,7 +211,9 @@
                 label.className = "list-group-item d-flex gap-2";
                 var input = document.createElement("input");
                 input.className = "form-check-input flex-shrink-0 strikethrough";
+                input.id = "check";
                 input.type = "checkbox";
+                input.oninput = celebration();
                 input.value = "";
                 var inputValue = document.getElementById("message-text").value;
                 var t = document.createTextNode(inputValue);
@@ -252,7 +254,7 @@
 
             function celebration(){
                 var img = document.getElementById("img");
-                var check = document.getElementById("celeb");
+                var check = document.getElementById("check");
                 if(check.checked){
                     img.style = "";
                     setTimeout(function(){img.style = "display:none"}, 1000);
