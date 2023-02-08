@@ -144,12 +144,9 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 500);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "this.celebration()" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.crossOff()"></button>
@@ -273,6 +270,14 @@
 
             function crossOff(){
                 this.parentElement.parentElement.remove();
+            }
+
+            function celebration(){
+                var img = document.getElementById("img");
+                if(this.checked){
+                    img.style = "";
+                    setTimeout(function(){img.style = "display:none"}, 500);
+                }
             }
         </script>
     </body>
