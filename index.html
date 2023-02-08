@@ -156,7 +156,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput="celebration()" value="">
                     <span>
-                        Complete assignment 1 for DS
+                        Complete assignment 1 for DSA
                         <br>
                         <small>
                             <input type="date" value="2023-02-01">
@@ -254,8 +254,7 @@
 
             function celebration(){
                 var img = document.getElementById("img");
-                var check = document.getElementById("check");
-                if(check.checked){
+                if(this.checked){
                     img.style = "";
                     setTimeout(function(){img.style = "display:none"}, 1000);
                 }
