@@ -61,6 +61,9 @@
 
             .img-bottom-left{
                 position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
             }
 
             /*override to change the add-task button colors */
@@ -143,7 +146,7 @@
                 <label class="list-group-item d-flex gap-2">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="celeb" type="checkbox" oninput="celebration()" value="">
                     <span>
-                      Study for Exams
+                      Study for Exam
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
