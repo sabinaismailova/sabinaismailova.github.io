@@ -223,6 +223,9 @@
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
                     </span>
+                    <span class="close" id="close">
+                        <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
+                    </span>
                 </label>
 
                 <label class="list-group-item d-flex gap-2">
@@ -324,19 +327,19 @@
             }
 
             function priorityUrgent(){
-                var label = document.createElement("label");
+                var label = document.getElementByClassName("label");
                 label.className = "list-group-item d-flex gap-2";
                 label.style = "background-color: rgb(197, 65, 65);";
             }
 
             function priorityImportant(){
-                var label = document.createElement("label");
+                var label = document.getElementByClassName("label");
                 label.className = "list-group-item d-flex gap-2";
                 label.style = "background-color: rgb(246, 214, 101);";
             }
 
             function priorityTrivial(){
-                var label = document.createElement("label");
+                var label = document.getElementByClassName("label");
                 label.className = "list-group-item d-flex gap-2";
                 label.style = "background-color: rgb(149, 196, 122);";
             }
