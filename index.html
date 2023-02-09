@@ -180,9 +180,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" value=""> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" value=""> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" value=""> Trivial</button>
+                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priorityUrgengt()" value=""> Urgent</button>
+                                    <button type="button" class="btn btn-code-important" id="important" onclick="priorityImportant()" value=""> Important</button>
+                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priorityTrivial()" value=""> Trivial</button>
                                 </div>
                             </form>
                         </div>
@@ -321,6 +321,24 @@
                 label.appendChild(s);
                 var xButton = document.getElementById("x-button");
                 xButton.click();
+            }
+
+            function priorityUrgent(){
+                var label = document.createElement("label");
+                label.className = "list-group-item d-flex gap-2";
+                label.style = "background-color: rgb(197, 65, 65);";
+            }
+
+            function priorityImportant(){
+                var label = document.createElement("label");
+                label.className = "list-group-item d-flex gap-2";
+                label.style = "background-color: rgb(246, 214, 101);";
+            }
+
+            function priorityTrivial(){
+                var label = document.createElement("label");
+                label.className = "list-group-item d-flex gap-2";
+                label.style = "background-color: rgb(149, 196, 122);";
             }
         </script>
     </body>
