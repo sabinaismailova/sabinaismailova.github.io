@@ -95,46 +95,46 @@
                 border-color: rgb(192, 169, 160);
             }
 
-            .btn-code-urgent:focus, .btn-code-urgent:active {
-                font-family:Georgia;
-                color: rgb(62, 46, 35);
-                background-color: rgb(197, 65, 65);
-                border-color: rgb(197, 65, 65);
-                box-shadow: 0 0 0 0.25rem rgba(208, 89, 89, 0.5);
-            }
-            .btn-code-urgent, .btn-code-urgent:hover{
-                font-family:Georgia;
-                color: rgb(62, 46, 35);
-                background-color: rgb(197, 65, 65);
-                border-color: rgb(197, 65, 65);
-            }
-
-            .btn-code-important:focus, .btn-code-important:active {
+            .btn-code-work:focus, .btn-code-work:active {
                 font-family:Georgia;
                 color: rgb(62, 46, 35);
                 background-color: rgb(246, 214, 101);
                 border-color: rgb(246, 214, 101);
-                box-shadow: 0 0 0 0.25rem rgba(239, 212, 113, 0.5);
+                box-shadow: 0 0 0 0.25rem rgb(246, 214, 101, 0.5);
             }
-            .btn-code-important, .btn-code-important:hover{
+            .btn-code-work, .btn-code-work:hover{
                 font-family:Georgia;
                 color: rgb(62, 46, 35);
                 background-color: rgb(246, 214, 101);
                 border-color: rgb(246, 214, 101);
             }
 
-            .btn-code-trivial:focus, .btn-code-trivial:active {
+            .btn-code-studies:focus, .btn-code-studies:active {
                 font-family:Georgia;
                 color: rgb(62, 46, 35);
-                background-color: rgb(149, 196, 122);
-                border-color: rgb(149, 196, 122);
-                box-shadow: 0 0 0 0.25rem rgba(149, 196, 122, 0.5);
+                background-color: rgb(138, 204, 161);
+                border-color: rgb(138, 204, 161);
+                box-shadow: 0 0 0 0.25rem rgba(138, 204, 161, 0.5);
             }
-            .btn-code-trivial, .btn-code-trivial:hover{
+            .btn-code-studies, .btn-code-studies:hover{
                 font-family:Georgia;
                 color: rgb(62, 46, 35);
-                background-color: rgb(149, 196, 122);
-                border-color: rgb(149, 196, 122);
+                background-color: rgb(138, 204, 161);
+                border-color: rgb(138, 204, 161);
+            }
+
+            .btn-code-life:focus, .btn-code-life:active {
+                font-family:Georgia;
+                color: rgb(62, 46, 35);
+                background-color: rgb(220, 171, 226);
+                border-color: rgb(220, 171, 226);
+                box-shadow: 0 0 0 0.25rem rgb(220, 171, 226, 0.5);
+            }
+            .btn-code-life, .btn-code-life:hover{
+                font-family:Georgia;
+                color: rgb(62, 46, 35);
+                background-color: rgb(220, 171, 226);
+                border-color: rgb(220, 171, 226);
             }
         </style>
         <title>To-Do List</title>
@@ -179,10 +179,10 @@
                                     <input type="date" id="date" value="">
                                 </div>
                                 <div class="form-group" id="priority">
-                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority(this)" value="urgent"> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority(this)" value="important"> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority(this)" value="trivial"> Trivial</button>
+                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Type(optional):</label>
+                                    <button type="button" class="btn btn-code-work" id="work" onclick="type(this)"> Work</button>
+                                    <button type="button" class="btn btn-code-studies" id="studies" onclick="type(this)"> Studies</button>
+                                    <button type="button" class="btn btn-code-life" id="life" onclick="type(this)"> Life</button>
                                 </div>
                             </form>
                         </div>
@@ -195,7 +195,7 @@
                 </div>
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
-                <label class="list-group-item d-flex gap-2" style="background-color: rgb(197, 65, 65, 0.5)">
+                <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
                         document.getElementById('img').style = '';
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
@@ -208,7 +208,7 @@
                     </span>
                 </label>
 
-                <label class="list-group-item d-flex gap-2">
+                <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
                         document.getElementById('img').style = '';
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
@@ -228,7 +228,7 @@
                     </span>
                 </label>
 
-                <label class="list-group-item d-flex gap-2">
+                <label class="list-group-item d-flex gap-2" style="background-color: rgb(220, 171, 226, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
                         document.getElementById('img').style = '';
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
@@ -241,7 +241,7 @@
                     </span>
                 </label>
 
-                <label class="list-group-item d-flex gap-2">
+                <label class="list-group-item d-flex gap-2" style="background-color: rgb(220, 171, 226, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
                         document.getElementById('img').style = '';
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
@@ -254,13 +254,13 @@
                     </span>
                 </label>
 
-                <label class="list-group-item d-flex gap-2">
+                <label class="list-group-item d-flex gap-2" style="background-color: rgb(246, 214, 101, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
                         document.getElementById('img').style = '';
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                        Work on group project
+                        Attend team meeting
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -277,22 +277,16 @@
 
             var color = "";
 
-            function priority(elt){
-                if(elt.getAttribute("id") == "urgent"){
-                    color = "background-color: rgb(197, 65, 65, 0.5)";
-                }
-                if(elt.getAttribute("id") == "important"){
+            function type(elt){
+                if(elt.getAttribute("id") == "work"){
                     color = "background-color: rgb(246, 214, 101, 0.5)";
                 }
-                if(elt.getAttribute("id") == "trivial"){
-                    color = "background-color: rgb(149, 196, 122, 0.5)";
+                if(elt.getAttribute("id") == "studies"){
+                    color = "background-color: rgb(138, 204, 161, 0.5)";
                 }
-            }
-            function priorityImportant(){
-                return "background-color: rgb(246, 214, 101, 0.5)";
-            }
-            function priorityTrivial(){
-                return "background-color: rgb(149, 196, 122, 0.5)";
+                if(elt.getAttribute("id") == "life"){
+                    color = "background-color: rgb(220, 171, 226, 0.5)";
+                }
             }
 
             /*Got the template for this function from W3schools tutorial. Link:https://www.w3schools.com/howto/howto_js_todolist.asp*/
