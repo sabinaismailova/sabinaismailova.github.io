@@ -196,7 +196,7 @@
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -289,7 +289,7 @@
                 input.className = "form-check-input flex-shrink-0 strikethrough";
                 input.id = "check";
                 input.type = "checkbox";
-                input.oninput = celebration(this);
+                input.oninput = celebration(input);
                 input.value = "";
                 var inputValue = document.getElementById("message-text").value;
                 var t = document.createTextNode(inputValue);
