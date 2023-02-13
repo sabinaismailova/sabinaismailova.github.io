@@ -177,10 +177,10 @@
                                     <input type="date" id="date" value="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority(this)" value="urgent"> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority(this)" value="important"> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority(this)" value="trivial"> Trivial</button>
+                                    <label for="message-text" class="col-form-label" style="font-family:Georgia;">Type:</label>
+                                    <button type="button" class="btn btn-code-urgent" id="work" onclick="priority(this)" value="work"> Work</button>
+                                    <button type="button" class="btn btn-code-important" id="studies" onclick="priority(this)" value="studies"> Studies</button>
+                                    <button type="button" class="btn btn-code-trivial" id="life" onclick="priority(this)" value="life"> Life</button>
                                 </div>
                             </form>
                         </div>
@@ -199,7 +199,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -276,13 +276,13 @@
             var color = "";
 
             function priority(elt){
-                if(elt.getAttribute("id") == "urgent"){
+                if(elt.getAttribute("id") == "work"){
                     color = "background-color: rgb(246, 214, 101, 0.5)";
                 }
-                if(elt.getAttribute("id") == "important"){
+                if(elt.getAttribute("id") == "studies"){
                     color = "background-color: rgb(138, 204, 161, 0.5)";
                 }
-                if(elt.getAttribute("id") == "trivial"){
+                if(elt.getAttribute("id") == "life"){
                     color = "background-color: rgb(220, 171, 226, 0.5)";
                 }
             }
