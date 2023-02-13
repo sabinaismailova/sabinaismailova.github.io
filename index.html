@@ -196,7 +196,7 @@
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
-                      Study for Exams
+                      Study for Exam
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -204,10 +204,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
                         Complete assignment 1 for DSA
                         <br>
@@ -224,10 +221,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(220, 171, 226, 0.5)">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
                       Go grocery shopping
                     </span>
@@ -237,10 +231,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(220, 171, 226, 0.5)">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
                         Clean and reorganize my desk
                     </span>
@@ -250,10 +241,7 @@
                 </label>
 
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(246, 214, 101, 0.5)">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
                         Attend team meeting
                     </span>
@@ -301,12 +289,7 @@
                 input.className = "form-check-input flex-shrink-0 strikethrough";
                 input.id = "check";
                 input.type = "checkbox";
-                input.oninput = function(){var img = document.getElementById("img");
-                                        if(this.checked){
-                                            img.style = "";
-                                            setTimeout(function(){img.style = "display:none"}, 700);
-                                        }
-                                };
+                input.oninput = celebration(this);
                 input.value = "";
                 var inputValue = document.getElementById("message-text").value;
                 var t = document.createTextNode(inputValue);
