@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -277,10 +277,10 @@
 
             function priority(){
                 var priority = document.getElementById("priority");
-                if(priority.getAttribute("value") == "urgent"){
+                if(priority.getAttribute("value") === "urgent"){
                     return "background-color: rgb(197, 65, 65)";
                 }
-                else if(priority.getAttribute("value") == "important"){
+                else if(priority.getAttribute("value") === "important"){
                     return "background-color: rgb(246, 214, 101)";
                 }
                 else{
