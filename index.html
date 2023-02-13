@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -278,7 +278,7 @@
             var color = "";
 
             function type(elt){
-                if(elt.getAttribute("id") == "work"){
+                if(elt.id == "work"){
                     color = "background-color: rgb(246, 214, 101, 0.5)";
                 }
                 if(elt.getAttribute("id") == "studies"){
