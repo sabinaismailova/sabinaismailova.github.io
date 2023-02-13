@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="priority" onclick="priority()" value="urgent"> Imp</button>
+                                    <button type="button" class="btn btn-code-urgent" id="priority" onclick="priority()" value="urgent"> Urgent</button>
                                     <button type="button" class="btn btn-code-important" id="priority" onclick="priority()" value="important"> Important</button>
                                     <button type="button" class="btn btn-code-trivial" id="priority" onclick="priority()" value="trivial"> Trivial</button>
                                 </div>
@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -277,10 +277,10 @@
 
             function priority(){
                 var priority = document.getElementById("priority");
-                if(priority.inputValue === "Urgent"){
+                if(priority.inputValue == "Urgent"){
                     return "background-color: rgb(197, 65, 65, 0.5)";
                 }
-                else if(priority.inputValue === "Important"){
+                else if(priority.inputValue == "Important"){
                     return "background-color: rgb(246, 214, 101, 0.5)";
                 }
                 else{
