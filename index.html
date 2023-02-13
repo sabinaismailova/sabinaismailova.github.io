@@ -180,9 +180,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priorityUrgengt()" value=""> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" onclick="priorityImportant()" value=""> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priorityTrivial()" value=""> Trivial</button>
+                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority()" value=""> Urgent</button>
+                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority()" value=""> Important</button>
+                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority()" value=""> Trivial</button>
                                 </div>
                             </form>
                         </div>
@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -274,6 +274,22 @@
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script>
+
+            function priority(){
+                var priority = document.getElementByType("button");
+                if(priority.id == "urgent"){
+                    return rgb(197, 65, 65);
+                }
+                if(priority.id == "important"){
+                    return rgb(246, 214, 101);
+                }
+                if(priority.id == "trivial"){
+                    return rgb(149, 196, 122);
+                }
+            }
+
+            var color = priority();
+
             /*Got the template for this function from W3schools tutorial. Link:https://www.w3schools.com/howto/howto_js_todolist.asp*/
             function addTask(){
                 var label = document.createElement("label");
@@ -322,26 +338,9 @@
                 btn.onclick = function(){this.parentElement.parentElement.remove();};
                 s.appendChild(btn);
                 label.appendChild(s);
+                label.style.backgroundColor = color;
                 var xButton = document.getElementById("x-button");
                 xButton.click();
-            }
-
-            function priorityUrgent(){
-                var label = document.getElementByClassName("label");
-                label.className = "list-group-item d-flex gap-2";
-                label.style = "background-color: rgb(197, 65, 65);";
-            }
-
-            function priorityImportant(){
-                var label = document.getElementByClassName("label");
-                label.className = "list-group-item d-flex gap-2";
-                label.style = "background-color: rgb(246, 214, 101);";
-            }
-
-            function priorityTrivial(){
-                var label = document.getElementByClassName("label");
-                label.className = "list-group-item d-flex gap-2";
-                label.style = "background-color: rgb(149, 196, 122);";
             }
         </script>
     </body>
