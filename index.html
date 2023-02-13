@@ -194,12 +194,9 @@
 
                 <!--Got the code for a checkbox list from bootstrap-5.1.3-examples list-groups-->
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
-                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "if(this.checked){
-                        document.getElementById('img').style = '';
-                        setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
-                    }" value="">
+                    <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -284,6 +281,14 @@
                 }
                 if(elt.getAttribute("id") == "life"){
                     color = "background-color: rgb(220, 171, 226, 0.5)";
+                }
+            }
+
+            function celebration(elt){
+                var img = document.getElementById('img');
+                if(elt.checked){
+                    img.style = '';
+                    setTimeout(function(){img.style = 'display:none'}, 700);
                 }
             }
 
