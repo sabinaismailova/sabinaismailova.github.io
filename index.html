@@ -180,9 +180,9 @@
                                 </div>
                                 <div class="form-group" id="priority">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority(this.id)" value="urgent"> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority(this.id)" value="important"> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority(this.id)" value="trivial"> Trivial</button>
+                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority(this)" value="urgent"> Urgent</button>
+                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority(this)" value="important"> Important</button>
+                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority(this)" value="trivial"> Trivial</button>
                                 </div>
                             </form>
                         </div>
@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -276,13 +276,13 @@
         <script>
 
             function priority(clicked){
-                if(clicked == "urgent"){
+                if(clicked.id == "urgent"){
                     return "background-color: rgb(197, 65, 65, 0.5)";
                 }
-                if(clicked == "important"){
+                if(clicked.id == "important"){
                     return "background-color: rgb(246, 214, 101, 0.5)";
                 }
-                if(clicked == "trivial"){
+                if(clicked.id == "trivial"){
                     return "background-color: rgb(149, 196, 122, 0.5)";
                 }
             }
@@ -293,7 +293,7 @@
                 return "background-color: rgb(149, 196, 122, 0.5)";
             }
 
-            var color = priority();
+            var color = priority(clicked);
 
             /*Got the template for this function from W3schools tutorial. Link:https://www.w3schools.com/howto/howto_js_todolist.asp*/
             function addTask(){
