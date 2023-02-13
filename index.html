@@ -178,11 +178,11 @@
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Date(optional):</label>
                                     <input type="date" id="date" value="">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="priority">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="priority" onclick="priorityUrgent()" value="urgent"> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="priority" onclick="priorityImportant()" value="important"> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="priority" onclick="priorityTrivial()" value="trivial"> Trivial</button>
+                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority()" value="urgent"> Urgent</button>
+                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority()" value="important"> Important</button>
+                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority()" value="trivial"> Trivial</button>
                                 </div>
                             </form>
                         </div>
@@ -201,7 +201,7 @@
                         setTimeout(function(){document.getElementById('img').style = 'display:none'}, 700);
                     }" value="">
                     <span>
-                      Study for Exam
+                      Study for Exams
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -275,8 +275,17 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script>
 
-            function priorityUrgent(){
-                return "background-color: rgb(197, 65, 65, 0.5)";
+            function priority(){
+                var id = EventTarget.id;
+                if(id == "urgent"){
+                    return "background-color: rgb(197, 65, 65, 0.5)";
+                }
+                if(id == "important"){
+                    return "background-color: rgb(246, 214, 101, 0.5)";
+                }
+                if(id == "trivial"){
+                    return "background-color: rgb(149, 196, 122, 0.5)";
+                }
             }
             function priorityImportant(){
                 return "background-color: rgb(246, 214, 101, 0.5)";
@@ -285,7 +294,7 @@
                 return "background-color: rgb(149, 196, 122, 0.5)";
             }
 
-            var color = priorityUrgent()||priorityImportant()||priorityTrivial();
+            var color = priority();
 
             /*Got the template for this function from W3schools tutorial. Link:https://www.w3schools.com/howto/howto_js_todolist.asp*/
             function addTask(){
