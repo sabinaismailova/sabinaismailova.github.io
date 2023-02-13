@@ -180,9 +180,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label" style="font-family:Georgia;">Priority:</label>
-                                    <button type="button" class="btn btn-code-urgent" id="urgent" onclick="priority()" value=""> Urgent</button>
-                                    <button type="button" class="btn btn-code-important" id="important" onclick="priority()" value=""> Important</button>
-                                    <button type="button" class="btn btn-code-trivial" id="trivial" onclick="priority()" value=""> Trivial</button>
+                                    <button type="button" class="btn btn-code-urgent" id="priority" onclick="priority()" value="urgent"> Urgent</button>
+                                    <button type="button" class="btn btn-code-important" id="priority" onclick="priority()" value="important"> Important</button>
+                                    <button type="button" class="btn btn-code-trivial" id="priority" onclick="priority()" value="trivial"> Trivial</button>
                                 </div>
                             </form>
                         </div>
@@ -276,14 +276,14 @@
         <script>
 
             function priority(){
-                var priority = document.getElementByType("button");
-                if(priority.id == "urgent"){
+                var priority = document.getElementById("priority");
+                if(priority.value == "urgent"){
                     return "background-color: rgb(197, 65, 65)";
                 }
-                if(priority.id == "important"){
+                if(priority.value == "important"){
                     return "background-color: rgb(246, 214, 101)";
                 }
-                if(priority.id == "trivial"){
+                if(priority.value == "trivial"){
                     return "background-color: rgb(149, 196, 122)";
                 }
             }
