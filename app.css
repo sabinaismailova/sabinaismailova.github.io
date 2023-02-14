@@ -1,6 +1,128 @@
-.list-group {
-    width: auto;
-    max-width: 460px;
-    margin: 64px auto;
+/*Got this from stack-overflow. Link: https://stackoverflow.com/questions/30975459/add-strikethrough-to-checked-checkbox*/
+.strikethrough:checked+span{
+    text-decoration-color: rgb(255, 176, 17);
+    text-decoration: line-through;
 }
 
+/*Got the style for close button from W3schools tutorial I got the temp for function addTask() from*/
+.close{
+    position:absolute;
+    right:0;
+    top:0;
+    padding: 12px 16px 12px 16px
+}
+
+/*overrode border-bottom to change the color of the line on header*/
+.border-bottom {
+    border-bottom: 2px solid #493a33 !important;
+}
+
+/*override list-group-item to try to add space between list items, round the edges, 
+change opacity, and change text font&color */
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #181514;
+    font-family:Georgia;
+    text-decoration: none;
+    background-color: rgba(65, 44, 34, 0.25);
+    border-radius: 8px solid rgba(18, 17, 16, 0.125);
+    margin: 10px;
+}
+
+/*override to change checkbox checked color */
+.form-check-input:checked {
+    background-color: rgb(217, 196, 41);
+    border-color: rgb(217, 196, 41);
+}
+
+/*override to change shadow color when checkbox is clicked*/
+.form-check-input:focus {
+    border-color: #c29967;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(253, 201, 13, 0.25);
+}
+
+/*creating class to position picture on bottom-right and bottom-left of page*/
+.img-bottom-right{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+}
+
+.img-center{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*override to change the add-task button colors */
+.btn-primary:focus, .btn-primary:active {
+    font-family:Georgia;
+    color: rgb(240, 231, 225);
+    background-color: rgb(42, 34, 31);
+    border-color: rgb(42, 34, 31);
+    box-shadow: 0 0 0 0.25rem rgba(217, 141, 41, 0.5);
+}
+.btn-primary, .btn-primary:hover{
+    font-family:Georgia;
+    color: rgb(240, 231, 225);
+    background-color: rgb(42, 34, 31);
+    border-color: rgb(42, 34, 31);
+}
+
+.btn-secondary:focus, .btn-secondary:active{
+    font-family:Georgia;
+    color: rgb(240, 231, 225);
+    background-color: rgb(192, 169, 160);
+    border-color: rgb(192, 169, 160);
+    box-shadow: 0 0 0 0.25rem rgba(241, 195, 135, 0.5);
+}
+.btn-secondary, .btn-secondary:hover{
+    font-family:Georgia;
+    color: rgb(240, 231, 225);
+    background-color: rgb(192, 169, 160);
+    border-color: rgb(192, 169, 160);
+}
+
+.btn-code-work:focus, .btn-code-work:active {
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(246, 214, 101);
+    border-color: rgb(246, 214, 101);
+    box-shadow: 0 0 0 0.25rem rgba(246, 214, 101, 0.5);
+}
+.btn-code-work, .btn-code-work:hover{
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(246, 214, 101);
+    border-color: rgb(246, 214, 101);
+}
+.btn-code-studies:focus, .btn-code-studies:active {
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(138, 204, 161);
+    border-color: rgb(138, 204, 161);
+    box-shadow: 0 0 0 0.25rem rgba(138, 204, 161, 0.5);
+}
+.btn-code-studies, .btn-code-studies:hover{
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(138, 204, 161);
+    border-color: rgb(138, 204, 161);
+}
+.btn-code-life:focus, .btn-code-life:active {
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(220, 171, 226);
+    border-color: rgb(220, 171, 226);
+    box-shadow: 0 0 0 0.25rem rgba(220, 171, 226, 0.5);
+}
+.btn-code-life, .btn-code-life:hover{
+    font-family:Georgia;
+    color: rgb(62, 46, 35);
+    background-color: rgb(220, 171, 226);
+    border-color: rgb(220, 171, 226);
+}

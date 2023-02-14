@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="app.css">
+        <!--
         <style>
             /*Got this from stack-overflow. Link: https://stackoverflow.com/questions/30975459/add-strikethrough-to-checked-checkbox*/
             .strikethrough:checked+span{
@@ -135,6 +137,7 @@
                 border-color: rgb(220, 171, 226);
             }
         </style>
+        -->
         <title>To-Do List</title>
     </head>
     
@@ -196,7 +199,7 @@
                 <label class="list-group-item d-flex gap-2" style="background-color: rgb(138, 204, 161, 0.5)">
                     <input class="form-check-input flex-shrink-0 strikethrough" id="check" type="checkbox" oninput= "celebration(this)" value="">
                     <span>
-                      Study for Exams
+                      Study for Exam
                     </span>
                     <span class="close" id="close">
                         <button type="button" class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
@@ -256,6 +259,8 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+        <!--
         <script>
 
             var color = "";
@@ -334,5 +339,6 @@
                 color = "";
             }
         </script>
+        -->
     </body>
 </html>
