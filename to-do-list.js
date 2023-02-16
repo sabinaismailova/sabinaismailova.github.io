@@ -70,5 +70,5 @@ function addTask(){
     label.appendChild(s);
     var xButton = document.getElementById("x-button");
     xButton.click();
-        color = "";
+    color = "";
 }
