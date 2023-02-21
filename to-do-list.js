@@ -29,7 +29,12 @@ function addTask(){
     input.className = "form-check-input flex-shrink-0 strikethrough";
     input.id = "check";
     input.type = "checkbox";
-    input.oninput = celebration(this);
+    input.oninput = function(){var img = document.getElementById("celeb");
+                            if(this.checked){
+                                img.style = "";
+                                setTimeout(function(){img.style = "display:none"}, 700);
+                            }
+                    };
     input.value = "";
     var inputValue = document.getElementById("message-text").value;
     var t = document.createTextNode(inputValue);
