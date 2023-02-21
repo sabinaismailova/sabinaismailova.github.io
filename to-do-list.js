@@ -13,7 +13,7 @@ function taskType(elt){
 }
 
 function celebration(elt){
-    var img = document.getElementById('img');
+    var img = document.getElementById('celeb');
     if(elt.checked){
         img.style = '';
         setTimeout(function(){img.style = 'display:none'}, 700);
@@ -29,12 +29,7 @@ function addTask(){
     input.className = "form-check-input flex-shrink-0 strikethrough";
     input.id = "check";
     input.type = "checkbox";
-    input.oninput = function(){var img = document.getElementById("img");
-                            if(this.checked){
-                                img.style = "";
-                                setTimeout(function(){img.style = "display:none"}, 700);
-                            }
-                };
+    input.oninput = celebration(this);
     input.value = "";
     var inputValue = document.getElementById("message-text").value;
     var t = document.createTextNode(inputValue);
