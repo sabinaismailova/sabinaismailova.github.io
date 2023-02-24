@@ -16,6 +16,7 @@ function celebration(elt){
     var img = document.getElementById('celeb');
     if(elt.checked){
         img.style = '';
+        //displays the celebratory img for .7 seconds when list item elt is checked 
         setTimeout(function(){img.style = 'display:none'}, 700);
     }
 }
