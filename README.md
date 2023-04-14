@@ -1,2 +1,2 @@
 # sabinaismailova.github.io
-This is a cutesy style to-do list with a theme inspired by Brown from LINE Friends. 
+This is a cutesy style to-do list with a theme inspired by Brown from LINE Friends. The website takes users tasks as input and adds them to the list. Tasks can be color coded based on category and can have deadlines. The user can check off tasks they completed by clicking on the task's checkbox. Users will be greated by an animation to congradulate them for completing each task. 
